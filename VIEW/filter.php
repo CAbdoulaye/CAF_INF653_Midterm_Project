@@ -1,5 +1,6 @@
 <main>
   <h2>Vechile Info</h2>
+  <a href="index.php">back</a>
   <section>
     <table>
       <tr>
@@ -22,14 +23,14 @@
       <?php } ?>
     </table>
 
-    <form method="post" action=".">
-      <p>Sort by:</p>
-      <input type="radio" id="sort_by_year" name="action" value="sort_by_year">
-      <label for="sort_by_year">Sort By Year</label><br>
-      <input type="radio" id="sort_by_price" name="action" value="sort_by_price">
-      <label for="sort_by_price">Sort By Price</label><br>
-      <input type="submit" value="Submit">
-    </form>
+      <form method="post" action=".">
+        <label>Sort By: </label>      
+        <input type="radio" id="sort_by_year" name="action" value="sort_by_year">
+        <label for="sort_by_year">Year</label>
+        <input type="radio" id="sort_by_price" name="action" value="sort_by_price">
+        <label for="sort_by_price">Price</label>
+        <input type="submit" value="Submit">
+      </form>
   </section>
   <a href="../index.php">back</a>
   <br><br><br><br>

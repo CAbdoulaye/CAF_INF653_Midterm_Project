@@ -68,6 +68,7 @@
         <th>Type</th>
         <th>Class</th> 
         <th>Price</th>
+        <th></th>
       </tr>
       <?php foreach ($vehicles as $vehicle) {?>
       <tr>
@@ -77,9 +78,20 @@
         <td><?=$vehicle['type']?></td>
         <td><?=$vehicle['class']?></td> 
         <td><?=$vehicle['price']?></td>
+        <td>
+          <form method="post" action="../MODEL/delete_vehicle.php">
+            <input type="hidden" name="vehicleID" value=<?=$vehicle['ID']?>>
+            <input type="submit" value="Delete">
+          </form>
+        </td>
       </tr>
       <?php } ?>
     </table>
+    <form method="post" action=".">
+      <input type="hidden" name="addItem" id="addItem" value="addVehicleSubmitButton">
+      <input class="btn btn-primary" type="submit" value="Add Vehicle">
+    </form>    
+    <br>
 
     <form method="post" action=".">
       <label>Sort By: </label>      
@@ -89,6 +101,11 @@
       <label for="sort_by_price">Price</label>
       <input type="submit" value="Submit">
     </form>
+
+    <form method="post" action=".">
+      <input type="hidden" name="view/edit" id="view-edit" value="add-delete_details">
+      <input class="btn btn-primary" type="submit" value="View/Edit Vehicle Details">
+    </form>   
 
   </section>
   <br><br><br><br>

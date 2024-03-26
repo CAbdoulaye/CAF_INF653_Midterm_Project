@@ -30,6 +30,10 @@ th {
   font-weight: bold;
 }
 
+h1{
+  color: red;
+}
+
 footer {
   background-color: #333;
   color: #fff;
